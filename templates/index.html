@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../static/script.js"></script>
+    <title>Feed Me!</title>
+</head>
+<body>
+    <h1>Welcome to Mexico!</h1>
+    <h2>Set your current position by clicking anywhere on the map.</h2>
+    <h3>Note: Rating goes from 1 to 5. Try "Italian" or "Mexican" as cuisine :)</h3>
+    <hr>
+    <div class="flex" id="textualStuff">
+        <div id="feedMeForm">
+            <h3>Set your preferrence!</h3>
+            <form id="formContainer" action="/api/submit_form" method="post">
+                <label for="cuisine"><strong>Cuisine:</strong></label>
+                <input type="text" id="cuisine" name="cuisine" required><br>
+
+                <label for="rating"><strong>Rating:</strong></label>
+                <input type="text" id="rating" name="rating" required><br>
+        
+                <label for="longitude"><strong>Latitude:</strong></label>
+                <input type="text" id="latitude" name="latitude" required><br>
+        
+                <label for="longitude"><strong>Longitude:</strong></label>
+                <input type="text" id="longitude" name="longitude" required><br>
+        
+                <button id="submitButton" type="submit">Feed Me!</button>
+            </form>    
+        </div>
+        <div id="restaurantList">
+            <h3>Restaurants near you:</h3>
+            <ul id="apiResult"></ul>
+        </div>
+    </div>
+    <div id="map" style="height: 400px"></div>
+</body>
+</html>
