@@ -18,7 +18,7 @@ python -m venv .
 To install the required dependencies, all of which are located in the included 
 `requirements.txt` file simply run:
 ```
-pip install -r requirements.txt
+bin/pip install -r requirements.txt
 ```
 
 ### Running:
