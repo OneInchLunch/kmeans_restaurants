@@ -8,6 +8,7 @@ The code is documented here and through comments.
 ## Getting started:
 ### Initializing the project:
 Before you can run the project you need to initialize a python virtual environment:
+
 After cloning this directory run the following commands:
 ```
 cd ${your_working_directory}/kmeans_restaurants
