@@ -39,8 +39,7 @@ def find_restaurants(u_input):
     # features_scaled = scaler.fit_transform(features)
 
     ### USED FOR ESTIMATING THE NUMBER OF DESIRED CLUSTERS ###
-    # Just uncomment this code below and comment all of the code from line 50
-
+    # Just uncomment this code below and comment all of the code from line 56
     # inertias = []
     # for k in range(1, 100):
     #     kmeans = KMeans(n_clusters=k, random_state=42)
